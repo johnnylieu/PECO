@@ -6,27 +6,41 @@ import json
 # Used to select the file in the command line as an argument
 import sys
 
-# f here is just a variable containing the contents of the file
-# as a string literal. We could've called f anything, but it seems to be standard.
-
-# sys.argv[1] is what selects the file when we write it in the command line.
 # the "r" is the function for reading the file.
-f = open(sys.argv[1],"r")
+def pathMerge(paths_file, slot):
+    # 'with open' is just an alternate way of writing the whole
+    # f = open(), and doesn't require close()
+    # this provides the function with the data from the file given as the paths_file argument
+    with open(paths_file, "r") as pathData:
 
-# setting pathData variable to contain the contents of the json
-# json.load() method takes the input from "f"(the path file), and
-# returns it as a Python dictionary.
-pathData = json.load(f)
+    # setting pathData variable to contain the contents of the json
+    # json.load() method takes the input from "f"(the path file), and
+    # returns it as a Python dictionary.
+        pathData = json.load(pathData)
+        pathData = pathData['routeSelections']
 
-# Here, using json.dumps to convert the dict back into json string and format it using indent = x
-pathjson = json.dumps(pathData, indent = 3)
+        # then setting the value of onePath to the routeSelections key
+        # chosen by the second argument after the paths_file
+        # (same format as the path_replay, except with only the path, and route selection)
+        onePath = pathData[(int(slot) - 1)]['path']
 
-# prints formatted result to console
-print(pathjson)
-f.close()
+    # Here, using json.dumps to convert the dict back into json string and format it using indent = x
+        fullPathData = json.dumps(pathData, indent = 3)
+        onePath = json.dumps(onePath, indent = 3)
+
+    # prints formatted result to console
+    print(onePath)
+    print(f"You've selected {pathData[(int(slot) - 1)]['label']} route!")
+    
+
+# sys.argv[n] is what selects the file when we write it in the command line.
+if __name__ == "__main__":
+    print(f"You've selected route: {int(sys.argv[2])}")
+    pathMerge(sys.argv[1], sys.argv[2])
+
 
 # this takes the formatted json and creates a new file with the contents.
 # IF file already exists, will overwrite file completely.
 # f = open("pathcopytest.json", "w")
-# f.write(pathjson)
+# f.write(fullPathData)
 # f.close()
