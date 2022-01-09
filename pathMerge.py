@@ -14,9 +14,10 @@ def pathMerge(paths_file, slot):
     with open(paths_file, "r") as pathData:
 
     # setting pathData variable to contain the contents of the json
-    # json.load() method takes the input from "f"(the path file), and
+    # json.load() method takes the input paths_file and
     # returns it as a Python dictionary.
         pathData = json.load(pathData)
+        # then narrowing it to JUST the routeSelections data
         pathData = pathData['routeSelections']
 
         # then setting the value of onePath to the routeSelections key
