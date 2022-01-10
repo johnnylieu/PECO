@@ -7,7 +7,7 @@ import json
 import sys
 
 # the "r" is the function for reading the file.
-def pathMerge(paths_file, slot):
+def pathMerge(paths_file, slotId):
     # 'with open' is just an alternate way of writing the whole
     # f = open(), and doesn't require close()
     # this provides the function with the data from the file given as the paths_file argument
@@ -23,7 +23,7 @@ def pathMerge(paths_file, slot):
         # then setting the value of onePath to the routeSelections key
         # chosen by the second argument after the paths_file
         # (same format as the path_replay, except with only the path, and route selection)
-        onePath = pathData[(int(slot) - 1)]['path']
+        onePath = pathData[(int(slotId) - 1)]['path']
 
     # Here, using json.dumps to convert the dict back into json string and format it using indent = x
         fullPathData = json.dumps(pathData, indent = 3)
@@ -31,7 +31,7 @@ def pathMerge(paths_file, slot):
 
     # prints formatted result to console
     print(onePath)
-    print(f"You've selected {pathData[(int(slot) - 1)]['label']} route!")
+    print(f"You've selected {pathData[(int(slotId) - 1)]['label']} route!")
     
 
 # sys.argv[n] is what selects the file when we write it in the command line.
