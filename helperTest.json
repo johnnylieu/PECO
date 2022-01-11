@@ -1,0 +1,178 @@
+{
+  "errors": [
+    {
+      "slotId": 1,
+      "errors": [
+        {
+          "start": {
+            "pose": [
+              18.012,
+              26.438
+            ],
+            "shelfId": "fa222dd6-07d8-425a-89e8-32e012f4e178",
+            "facing": "S"
+          },
+          "end": {
+            "pose": [
+              19.828,
+              30.573
+            ],
+            "shelfId": "fa222dd6-07d8-425a-89e8-32e012f4e178",
+            "facing": "N"
+          },
+          "msg": "p2p"
+        }
+      ]
+    },
+    {
+      "slotId": 5,
+      "errors": [
+        {
+          "start": {
+            "pose": [
+              -16.302,
+              -49.621,
+              1.157
+            ],
+            "shelfId": null,
+            "facing": null
+          },
+          "end": {
+            "pose": [
+              -14.212,
+              -44.865,
+              1.157
+            ],
+            "shelfId": null,
+            "facing": null
+          },
+          "msg": "[Warning] Potential collision"
+        }
+      ]
+    },
+    {
+      "slotId": 3,
+      "errors": [
+        {
+          "start": {
+            "pose": [
+              -30.845,
+              26.167,
+              -0.414
+            ],
+            "shelfId": null,
+            "facing": null
+          },
+          "end": {
+            "pose": [
+              -29.01,
+              25.361,
+              -0.414
+            ],
+            "shelfId": null,
+            "facing": null
+          },
+          "msg": "[Warning] Potential collision"
+        }
+      ]
+    },
+    {
+      "slotId": 4,
+      "errors": [
+        {
+          "start": {
+            "pose": [
+              -10.616,
+              -59.251,
+              -0.414
+            ],
+            "shelfId": null,
+            "facing": null
+          },
+          "end": {
+            "pose": [
+              -8.775,
+              -60.06,
+              -0.414
+            ],
+            "shelfId": null,
+            "facing": null
+          },
+          "msg": "[Warning] Potential collision"
+        }
+      ]
+    }
+  ],
+  "origin": [
+    -68.95490319443866,
+    -80.90986076882928
+  ],
+  "routeSelections": [
+    {
+      "slotId": 0,
+      "path": [
+        [
+          0,
+          0,
+          0
+        ]
+      ],
+      "label": "Electronics"
+    },
+    {
+      "slotId": 1,
+      "path": [
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "label": "Pharmacy"
+    },
+    {
+      "slotId": 2,
+      "path": [
+        [
+          2,
+          2,
+          2
+        ]
+      ],
+      "label": "Center Front"
+    },
+    {
+      "slotId": 3,
+      "path": [
+        [
+          3,
+          3,
+          3
+        ]
+      ],
+      "label": "Center Back"
+    },
+    {
+      "slotId": 4,
+      "path": [
+        [
+          4,
+          4,
+          4
+        ]
+      ],
+      "label": "Hardline"
+    },
+    {
+      "slotId": 5,
+      "path": [
+        [
+          5,
+          5,
+          5
+        ]
+      ],
+      "label": "Grocery"
+    }
+  ]
+}
